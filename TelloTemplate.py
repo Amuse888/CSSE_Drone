@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 6):
+def sendmsg(msg, sleep = 8):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -40,26 +40,20 @@ def sendmsg(msg, sleep = 6):
 recvThread = threading.Thread(target=recv)
 recvThread.start()
 
-
-# CREATE FUNCTIONS HERE....
-
-
-print("\nFirst & Last Names")
-print("Program Name: ")
-print("Date: ")
-print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
-print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
-ready = input('\nAre you ready to take flight: ')
-
-# Triangle Function
-def triangle():
-    for i in range(3):
-        sendmsg('forward 80')
-        sendmsg('ccw 120')
+# 360 Function
+def go():
+    for i in range(4):
+        sendmsg('right 80')
+        sendmsg('ccw 20')
 
 
 print("\nGabriel Westra")
 print("Program Name: Square and Triangle")
+print("Date: 12/21/22")
+print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
+print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
+ready = input('\nAre you ready to take flight: ')
+
 
 try:
     if ready.lower() == 'yes':
@@ -68,14 +62,9 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        square()
-        triangle()
+        go()
 
         sendmsg('land')
-
-        # Review the (SDK) Software Development Kit resource for Drone Commands
-        # Delete these comments before writing your program
-
 
         print('\nGreat Flight!!!')
 
@@ -83,6 +72,7 @@ try:
         print('\nMake sure you check WIFI, surroundings, co-pilot is ready, re-run program\n')
 except KeyboardInterrupt:
     sendmsg('emergency')
+
 
 breakr = True
 sock.close()
