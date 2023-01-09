@@ -51,6 +51,15 @@ print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
 ready = input('\nAre you ready to take flight: ')
 
+# Triangle Function
+def triangle():
+    for i in range(3):
+        sendmsg('forward 80')
+        sendmsg('ccw 120')
+
+
+print("\nGabriel Westra")
+print("Program Name: Square and Triangle")
 
 try:
     if ready.lower() == 'yes':
@@ -59,10 +68,14 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
+        square()
+        triangle()
+
+        sendmsg('land')
+
         # Review the (SDK) Software Development Kit resource for Drone Commands
         # Delete these comments before writing your program
 
-        sendmsg('land')
 
         print('\nGreat Flight!!!')
 
