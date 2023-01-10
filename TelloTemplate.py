@@ -41,13 +41,15 @@ recvThread = threading.Thread(target=recv)
 recvThread.start()
 
 # First Hoop
-def (firsthoop)
+def firsthoop():
+    sendmsg('up 40')
+    sendmsg('forward 130')
 
-def (secondhoop)
+#def secondhoop():
 
-def (thirdhoop)
+#def thirdhoop():
 
-def (fourthhoop)
+#def fourthhoop():
 
 
 print("\nGabriel Westra, Dylan Bellinger")
