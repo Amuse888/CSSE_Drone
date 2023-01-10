@@ -40,15 +40,18 @@ def sendmsg(msg, sleep = 8):
 recvThread = threading.Thread(target=recv)
 recvThread.start()
 
-# 360 Function
-def go():
-    for i in range(4):
-        sendmsg('right 80')
-        sendmsg('ccw 20')
+# First Hoop
+def (firsthoop)
+
+def (secondhoop)
+
+def (thirdhoop)
+
+def (fourthhoop)
 
 
-print("\nGabriel Westra")
-print("Program Name: Square and Triangle")
+print("\nGabriel Westra, Dylan Bellinger")
+print("Program Name: Drone Comp")
 print("Date: 12/21/22")
 print("\n****CHECK YOUR TELLO WIFI ADDRESS****")
 print("\n****CHECK SURROUNDING AREA BEFORE FLIGHT****")
@@ -62,7 +65,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        go()
+        firsthoop()
 
         sendmsg('land')
 
