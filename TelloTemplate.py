@@ -45,7 +45,9 @@ def firsthoop():
     sendmsg('up 40')
     sendmsg('forward 130')
 
-#def secondhoop():
+def secondhoop():
+    sendmsg('stop')
+    sendmsg('up 15')('forward 200')
 
 #def thirdhoop():
 
