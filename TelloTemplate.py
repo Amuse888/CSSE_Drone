@@ -42,12 +42,11 @@ recvThread.start()
 
 # First Hoop
 def firsthoop():
-    sendmsg('up 40')
-    sendmsg('forward 130')
+    sendmsg('up 40', 9)
+    sendmsg('forward 170', 9)
 
 def secondhoop():
-    sendmsg('stop')
-    sendmsg('up 15')('forward 200')
+    sendmsg('go 120 120 40 20', 9)
 
 #def thirdhoop():
 
@@ -69,7 +68,8 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        firsthoop()
+        #firsthoop()
+        secondhoop()
 
         sendmsg('land')
 
