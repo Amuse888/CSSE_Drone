@@ -46,7 +46,7 @@ def firsthoop():
     sendmsg('forward 170', 9)
 
 def secondhoop():
-    sendmsg('go 120 120 40 20', 9)
+    sendmsg('go 100 40 80 20', 9)
 
 #def thirdhoop():
 
@@ -68,7 +68,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        #firsthoop()
+        firsthoop()
         secondhoop()
 
         sendmsg('land')
