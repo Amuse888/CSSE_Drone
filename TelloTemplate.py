@@ -42,19 +42,22 @@ recvThread.start()
 
 # First Hoop
 def firsthoop():
-    sendmsg('battery?')
     sendmsg('up 40', 10)
     sendmsg('forward 170', 10)
 
 def secondhoop():
-    sendmsg('go 120 28 80 20', 10)
+    sendmsg('go 120 20 80 20', 10)
     sendmsg('ccw 180', 10)
 
 def thirdhoop():
-    sendmsg('curve -25 10 0 25 -140 0 30', 10)
-    sendmsg('ccw 180', 10)
+    sendmsg('curve -25 10 0 25 -220 0 30', 10)
 
 #def fourthhoop():
+
+
+
+def battery():
+    sendmsg('battery?')
 
 
 print("\nGabriel Westra, Dylan Bellinger")
@@ -72,6 +75,7 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
+        battery()
         firsthoop()
         secondhoop()
         thirdhoop()
