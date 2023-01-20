@@ -67,7 +67,7 @@ try:
         sendmsg('cw 180', 11)
         sendmsg('down 20', 11)
         sendmsg('right 20', 11)
-        sendmsg('forward 150', 11)
+        sendmsg('forward 200', 11)
         sendmsg('go 135 15 -80 20', 11)
         sendmsg('forward 100', 11)
         sendmsg('land')
